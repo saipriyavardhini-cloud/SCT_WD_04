@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Task Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Advanced Task Manager</h1>
+        <button id="themeBtn">🌙 Dark Mode</button>
+    </div>
+
+    <div class="task-form">
+
+        <input type="text" id="title" placeholder="Task Title">
+
+        <textarea id="description"
+        placeholder="Task Description"></textarea>
+
+        <input type="date" id="date">
+
+        <input type="time" id="time">
+
+        <select id="priority">
+            <option value="High">High Priority</option>
+            <option value="Medium">Medium Priority</option>
+            <option value="Low">Low Priority</option>
+        </select>
+
+        <button id="addTask">Add Task</button>
+
+    </div>
+
+    <input
+    type="text"
+    id="search"
+    placeholder="Search Tasks">
+
+    <div class="controls">
+
+        <button onclick="setFilter('all')">
+            All
+        </button>
+
+        <button onclick="setFilter('pending')">
+            Pending
+        </button>
+
+        <button onclick="setFilter('completed')">
+            Completed
+        </button>
+
+        <select id="sortSelect">
+            <option value="date">Sort By Date</option>
+            <option value="priority">Sort By Priority</option>
+        </select>
+
+    </div>
+
+    <div class="stats">
+
+        <div>Total: <span id="total">0</span></div>
+
+        <div>Completed: <span id="completed">0</span></div>
+
+        <div>Pending: <span id="pending">0</span></div>
+
+    </div>
+
+    <div id="taskList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
